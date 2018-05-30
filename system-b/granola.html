@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASDA Groceries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="../js/generic2.js"></script>
+</head>
+
+<body>
+  <!-- sticky navbar to show quit button -->
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+    <button id="quit" class="btn btn-danger">I Give Up</button>
+  </nav>
+
+  <div class="container">
+    <div class="row" id="header-img"></div>
+  </div>
+
+  <div class="container-fluid">
+    <div id="menu-img"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h2 id="title">Granola</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-9">
+        <div class="listing">
+          <a id="granola1" href="./tropical-granola.html"><img src="../images/tropical-granola.png" alt="ASDA Tropical Granola" class="granola-img" title="Go to product page"></a>
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <a id="granola2" href="./raisin-almond.html"><img src="../images/raisin-almond-granola.png" alt="ASDA Raisin Almond Granola" class="granola-img" title="Go to product page"></a>
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <img src="../images/coconut-granola.png" alt="ASDA Coconut Granola" class="granola-img" title="Go to product page">
+          <h4 class="text-center price-font">£3.75</h4>
+          <p class="text-center text-small">(65.8p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <img src="../images/hazlenut-granola.png" alt="ASDA Hazlenut Granola" class="granola-img" title="Go to product page">
+          <h4 class="text-center price-font">£1.99</h4>
+          <p class="text-center text-small">(39.8p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <a id="granola3" href="strawberry-granola.html"><img src="../images/strawberry-granola.png" alt="ASDA Strawberry Granola" class="granola-img" title="Go to product page"></a>
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(20.0p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskCompleted()" disabled id="correct">Add</button>
+        </div>
+        <div class="listing">
+          <img src="../images/chunky-granola.png" alt="ASDA Chunky Granola" class="granola-img" title="Go to product page">
+          <h4 class="text-center price-font">£2.98</h4>
+          <p class="text-center text-small">(74.5p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <img src="../images/crunchy-granola.png" alt="ASDA Tropical Granola" class="granola-img" title="Go to product page">
+          <h4 class="text-center price-font">£2.00</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+        <div class="listing">
+          <img src="../images/caramel-granola.png" alt="ASDA Tropical Granola" class="granola-img" title="Go to product page">
+          <h4 class="text-center price-font">£2.00</h4>
+          <p class="text-center text-small">(20.0p/100g)</p>
+          <button class="btn btn-success btn-md add-btn" onclick="stopTimerAndSetTaskNotCompleted()" disabled>Add</button>
+        </div>
+      </div>
+      <!-- Right-side column div -->
+      <div class="col-3" id="col-4-img"></div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="container-fluid">
+    <div class="footer"></div>
+  </div>
+
+  <script>
+    $(document).ready(() => {
+      // Ensure user cannot click add button in experiment until user has visited all three product details pages
+      let imagesClickedArr = JSON.parse(localStorage.getItem('exp2-allImagesClicked'));
+
+      $('#granola1').click(() => {
+        imagesClickedArr[0] = true;
+        localStorage.setItem('exp2-allImagesClicked', JSON.stringify(imagesClickedArr));
+      });
+
+      $('#granola2').click(() => {
+        imagesClickedArr[1] = true;
+        localStorage.setItem('exp2-allImagesClicked', JSON.stringify(imagesClickedArr));
+      });
+
+      $('#granola3').click(() => {
+        imagesClickedArr[2] = true;
+        localStorage.setItem('exp2-allImagesClicked', JSON.stringify(imagesClickedArr));
+      });    
+      
+      if (imagesClickedArr[0] && imagesClickedArr[1] && imagesClickedArr[2]) {
+        $('.add-btn').attr('disabled', false);
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

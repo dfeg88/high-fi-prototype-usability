@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASDA Groceries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-12 text-center jumbotron">
+        <h3><strong>For Researchers Only</strong></h3>
+        <br>
+        <h4>Select Experiment Order:</h4>
+        <hr>
+        <button class="btn btn-danger" id="a-b">A -> B</button>
+        <button class="btn btn-info" id="b-a">B -> A</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+
+      $('#a-b').click(function() {
+        localStorage.setItem('firstSystem', 'A');
+        window.location.href = 'part-one-instructions.html';
+      });
+
+      $('#b-a').click(function() {
+        localStorage.setItem('firstSystem', 'B');
+        window.location.href = 'system-b/part-two-instructions.html';
+      });
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="./js/results.js"></script>
+</head>
+<body>
+  <div class="container">
+    <br> 
+    <div class="row">
+      <div class="col-12 text-center jumbotron">
+        <h2>PLEASE DO NOT CLOSE THIS PAGE</h2>
+        <br>
+        <h4 style="color:blue">RESULTS</h4>
+        <br>
+        <textarea id="results" cols="50" rows="25"></textarea>
+        <br><br>
+        <button type="button" class="btn btn-info hidden" id="restart">Restart Experiment (and clear metrics)</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#restart').click(function() {
+        const confirmMessage = confirm(`Are you sure you want to reset all metrics? This information will be lost.`);
+
+        if (confirmMessage) {
+          localStorage.clear();
+          window.location.href = 'index.html';
+        }
+      });
+    });
+
+    // don't show restart button for 20 seconds in case a participant is trigger happy
+    setTimeout(() => {
+      $('#restart').removeClass('hidden');
+    }, 20000);
+  </script>
+</body>
+</html>

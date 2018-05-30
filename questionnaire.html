@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Questionnaire</title>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="./js/questionnaire.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Feedback Questionnaire</h2><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Your feedback is now required..</h3>
+        <br>
+        <p class="text-info"><i>Thank you for taking the time to complete this experiment. Please help us by taking a few minutes to tell us how satisfied you were with Systems A and B.</i></p>
+        <hr>
+    
+        <form>
+          <p><strong>1) What gender do you identify as?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantGender" value="M">
+            <label class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantGender" value="F">
+            <label class="form-check-label">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantGender" value="O">
+            <label class="form-check-label">Other</label>
+          </div>
+
+          <br><br>  
+
+          <p><strong>2) Which age group do you belong to?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantAgeGroup" value="lt-18">
+            <label class="form-check-label">Under 18</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantAgeGroup" value="18-24">
+            <label class="form-check-label">18-24</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantAgeGroup" value="25-31">
+            <label class="form-check-label">25-31</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="participantAgeGroup" value="gte-32">
+            <label class="form-check-label">32 and above</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>3) How quickly did you feel you were able to compare products with <span class="text-success">System A</span>?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAQuickness" value="1">
+            <label class="form-check-label">Very slow</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAQuickness" value="2">
+            <label class="form-check-label">Slow</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAQuickness" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAQuickness" value="4">
+            <label class="form-check-label">Quick</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAQuickness" value="5">
+            <label class="form-check-label">Very quick</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>4) How quickly did you feel you were able to compare products with <span class="text-danger">System B</span>?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBQuickness" value="1">
+            <label class="form-check-label">Very slow</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBQuickness" value="2">
+            <label class="form-check-label">Slow</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBQuickness" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBQuickness" value="4">
+            <label class="form-check-label">Quick</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBQuickness" value="5">
+            <label class="form-check-label">Very quick</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>5) How satisfied were you with the way that <span class="text-success">System A</span> allows you to compare products?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareSatisfaction" value="1">
+            <label class="form-check-label">Highly unsatisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareSatisfaction" value="2">
+            <label class="form-check-label">Quite unsatisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareSatisfaction" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareSatisfaction" value="4">
+            <label class="form-check-label">Quite satisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareSatisfaction" value="5">
+            <label class="form-check-label">Highly satisfied</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>6) How satisfied were you with the way that <span class="text-danger">System B</span> allows you to compare products?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareSatisfaction" value="1">
+            <label class="form-check-label">Highly unsatisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareSatisfaction" value="2">
+            <label class="form-check-label">Quite unsatisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareSatisfaction" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareSatisfaction" value="4">
+            <label class="form-check-label">Quite satisfied</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareSatisfaction" value="5">
+            <label class="form-check-label">Highly satisfied</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>7) How likely is it that you would use <span class="text-success">System A</span> again?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAUseAgain" value="1">
+            <label class="form-check-label">Highly unlikely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAUseAgain" value="2">
+            <label class="form-check-label">Quite unlikely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAUseAgain" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAUseAgain" value="4">
+            <label class="form-check-label">Quite likely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAUseAgain" value="5">
+            <label class="form-check-label">Highly likely</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>8) How likely is it that you would use <span class="text-danger">System B</span> again?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBUseAgain" value="1">
+            <label class="form-check-label">Highly unlikely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBUseAgain" value="2">
+            <label class="form-check-label">Quite unlikely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBUseAgain" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBUseAgain" value="4">
+            <label class="form-check-label">Quite likely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBUseAgain" value="5">
+            <label class="form-check-label">Highly likely</label>
+          </div>
+          <br><br>
+          <p><strong>9) Which system did you find more intuitive to use?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="mostIntuitiveSystem" value="A">
+            <label class="form-check-label">System A</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="mostIntuitiveSystem" value="B">
+            <label class="form-check-label">System B</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>10) How would you rate the ease of comparing products in <span class="text-success">System A</span>?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareEase" value="1">
+            <label class="form-check-label">Very difficult</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareEase" value="2">
+            <label class="form-check-label">Quite difficult</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareEase" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareEase" value="4">
+            <label class="form-check-label">Quite easy</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemACompareEase" value="5">
+            <label class="form-check-label">Very easy</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>11) How would you rate the ease of comparing products in <span class="text-danger">System B</span>?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareEase" value="1">
+            <label class="form-check-label">Very difficult</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareEase" value="2">
+            <label class="form-check-label">Quite difficult</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareEase" value="3">
+            <label class="form-check-label">Average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareEase" value="4">
+            <label class="form-check-label">Quite easy</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBCompareEase" value="5">
+            <label class="form-check-label">Very easy</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>12) If you had the choice to use one of these systems in the future, which one would you rather use?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemChoice" value="A">
+            <label class="form-check-label">System A</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemChoice" value="B">
+            <label class="form-check-label">System B</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>13) How often did you become frustrated with <span class="text-success">System A</span> during the experiment?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAFrustration" value="5">
+            <label class="form-check-label">Never</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAFrustration" value="4">
+            <label class="form-check-label">Rarely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAFrustration" value="3">
+            <label class="form-check-label">Sometimes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAFrustration" value="2">
+            <label class="form-check-label">Quite often</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemAFrustration" value="1">
+            <label class="form-check-label">Very often</label>
+          </div>
+
+          <br><br>
+
+          <p><strong>14) How often did you become frustrated with <span class="text-danger">System B</span> during the experiment?</strong></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBFrustration" value="5">
+            <label class="form-check-label">Never</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBFrustration" value="4">
+            <label class="form-check-label">Rarely</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBFrustration" value="3">
+            <label class="form-check-label">Sometimes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBFrustration" value="2">
+            <label class="form-check-label">Quite often</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="systemBFrustration" value="1">
+            <label class="form-check-label">Very often</label>
+          </div>
+        </form>
+        <br>
+        <button class="btn btn-info" onclick="onClear()">Clear Answers</button>
+        <button class="btn btn-success" onclick="onSubmit()">Submit</button>
+      </div>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASDA Groceries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="./js/generic.js"></script>
+  <script src="./js/granola.js"></script>
+</head>
+
+<body>
+  <!-- sticky navbar to show quit button -->
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+    <button id="quit" class="btn btn-danger">I Give Up</button>
+  </nav>
+
+  <div class="container">
+    <div class="row" id="header-img"></div>
+  </div>
+
+  <div class="container-fluid">
+    <div id="menu-img"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h2 id="title">Granola</h2>
+    </div>
+
+    <div class="row" id="compare-row">
+      <button id="compare-btn" class="btn btn-large btn-secondary" onclick="goToCompare()" disabled>Compare</button>
+    </div>
+
+    <div class="row">
+      <div class="col-9">
+        <div class="listing">
+          <img src="./images/tropical-granola.png" alt="ASDA Tropical Granola" class="granola-img">
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck1" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck1" id="compareLabel1">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/raisin-almond-granola.png" alt="ASDA Raisin Almond Granola" class="granola-img">
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck2" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck2" id="compareLabel2">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/coconut-granola.png" alt="ASDA Coconut Granola" class="granola-img">
+          <h4 class="text-center price-font">£3.75</h4>
+          <p class="text-center text-small">(65.8p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck3" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck3" id="compareLabel3">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/hazlenut-granola.png" alt="ASDA Hazlenut Granola" class="granola-img">
+          <h4 class="text-center price-font">£1.99</h4>
+          <p class="text-center text-small">(39.8p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck4" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck4">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/strawberry-granola.png" alt="ASDA Strawberry Granola" class="granola-img">
+          <h4 class="text-center price-font">£1.59</h4>
+          <p class="text-center text-small">(20.0p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck5" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck5" id="compareLabel5">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/chunky-granola.png" alt="ASDA Chunky Granola" class="granola-img">
+          <h4 class="text-center price-font">£2.98</h4>
+          <p class="text-center text-small">(74.5p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck6" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck6">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/crunchy-granola.png" alt="ASDA Tropical Granola" class="granola-img">
+          <h4 class="text-center price-font">£2.00</h4>
+          <p class="text-center text-small">(15.9p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck7" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck7">Select to compare</label>
+          </div>
+        </div>
+        <div class="listing">
+          <img src="./images/caramel-granola.png" alt="ASDA Tropical Granola" class="granola-img">
+          <h4 class="text-center price-font">£2.00</h4>
+          <p class="text-center text-small">(20.0p/100g)</p>
+          <button class="btn btn-success btn-md add-btn">Add</button>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="compareCheck8" onclick="countChecked()">
+            <label class="form-check-label" for="compareCheck8">Select to compare</label>
+          </div>
+        </div>
+      </div>
+      <!-- Right-side column div -->
+      <div class="col-3" id="col-4-img"></div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="container-fluid">
+    <div class="footer"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASDA Groceries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-12 text-center jumbotron" id="instructions">
+        <h2><strong>Group 22 - User Experiment</strong></h2><hr>
+        <p>This experiment aims to find out if a proposed product comparison feature is faster and more satisfactory to use than the current implementation on ASDA Groceries.
+        The experiment is in two parts, each of which will require you to interact with the product list and product details pages within the ASDA Groceries website.</p>
+        <p>Do not be concerned if you think you have made a mistake, as you have not; mistakes made are a result of the interface and will serve to help further improve it.</p><hr>
+        <h3 class="h4"><strong><span class="text-success">System A</span> - Instructions:</strong></h3>
+        <ul class="list-group list-group-flush text-left">
+          <li class="list-group-item">1) Do <strong>not</strong> close the browser window at any time</li>
+          <li class="list-group-item">2) Do <strong>not</strong> use the browser's back button at any time</li>
+          <li class="list-group-item">3) If, at any point, you wish to end this part of the experiment, click the 'I Give Up' button at the top</li>
+          <li class="list-group-item">
+            4) Compare the <mark>three cheapest products</mark> in order to determine which has the
+            <mark>lowest amount of sugar per serving</mark>, and then <mark>add</mark> this product to the shopping basket.
+          </li>
+        </ul>
+        <hr>
+        <p>The experiment will end when you add either the correct or incorrect item to the basket.</p>
+        <br>
+        <a href="granola.html" class="btn btn-lg btn-danger" onclick="createStartTimestamp()">Start</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

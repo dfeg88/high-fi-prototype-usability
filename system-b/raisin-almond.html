@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASDA Groceries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="../js/generic2.js"></script>
+</head>
+
+<body>
+  <!-- sticky navbar to show quit button -->
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+    <button id="quit" class="btn btn-danger">I Give Up</button>
+  </nav>
+
+  <div class="container">
+    <div class="row" id="header-img"></div>
+  </div>
+
+  <div class="container-fluid">
+    <div id="nav-img"></div>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <a href="granola.html" class="btn btn-success" id="back-btn">Back</a>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <div class="row">
+          <div class="col-5 text-center">
+            <img src="../images/raisin-almond-granola-lg.png" class="granola-img-lg">
+          </div>
+          <div class="col-7">
+            <h4>ASDA Raisin & Almond Granola</h4>
+            <div class="row">
+              <div class="col-12">
+                <small>1kg</small>
+                <small class="text-right" style="float: right">Product Code: <strong>5758181</strong></small>
+              </div>
+            </div><br>
+            <div>
+              <span class="h3"><strong>£1.59</strong></span>
+              <span>(15.9p per 100g)</span>
+            </div><br>
+            <button type="button" class="btn btn-success" onclick="stopTimerAndSetTaskNotCompleted()">Add</button><br><br>
+            <img src="../images/raisin-almond-nutrition.png" class="nutrition-img">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pdp-img" id="raisin-almond"></div>
+          </div>
+      </div>
+      <div class="col-3" id="col-4-img"></div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="container-fluid">
+    <div class="footer"></div>
+  </div>
+</body>
+
+</html>
